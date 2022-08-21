@@ -82,8 +82,8 @@ To a ensure we have a maintainable product, which is also easy to support and sc
 - Unit tests
 
 #### Total time spent
-1 hour -> analysis
-1.5 hour -> db environment setup / design
-2 hour -> api app design
-4 hours -> features/patterns
-2 hours -> finalizing preparations and readme doc
+- 1 hour -> analysis
+- 1.5 hour -> db environment setup / design
+- 2 hour -> api app design
+- 4 hours -> features/patterns
+- 2 hours -> finalizing preparations and readme doc
