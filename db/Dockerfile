@@ -7,14 +7,9 @@ ENV MSSQL_TCP_PORT=1433
 
 WORKDIR /db
 
-COPY customers.bak /var/opt/mssql/backup/customers.bak
 COPY restore_db.sql .
 
 RUN (/opt/mssql/bin/sqlservr --accept-eula & ) | grep -q "Service Broker manager has started" \
     && /opt/mssql-tools/bin/sqlcmd -S 127.0.0.1 \
     -U SA -P "SecretPHAssessPwd1!" \
     -i restore_db.sql
-
-# RUN /opt/mssql-tools/bin/sqlcmd -S 127.0.0.1 \
-#     -U SA -P "SecretPHAssessPwd1!" \
-#     -i restore_db.sql
